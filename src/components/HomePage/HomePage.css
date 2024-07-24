@@ -1,0 +1,89 @@
+.introContainer {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 15%;
+    font-size: 30px;
+    box-sizing: border-box; /* Include padding in the container's width */
+    padding-bottom:50px;
+}
+
+.introContent {
+    color: white;
+    padding-left: 5%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    width:80%;
+    height:100%;
+    padding-bottom:50px;
+}
+
+p.introContent {
+    max-width: 100%; /* Ensure the width does not exceed the container */
+    font-size: 20px;
+}
+
+h2.introContent {
+    max-width: 100%; /* Ensure the width does not exceed the container */
+    font-size: 30px;
+    width:50%
+}
+
+.projectSection {
+    position: relative; /* Change to relative positioning if possible */
+    height: 650px;
+    margin: 50px auto 0 auto; /* Center the section horizontally */
+    width: calc(90%); /* Adjust width considering margins */
+    background-color: #B38F6F;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-top:5%;
+    border-radius:10px;
+    color:white;
+    font-size:15px;
+    display:flex;
+    flex-direction: row;
+}
+.projectLeftContainer{
+    padding-top:20px;
+    padding-left:30px;
+    width:40%;
+}
+li{
+    list-style:none;
+}
+.skillsList{
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    width:500px;
+    margin-left:-3%;
+}
+.skills:hover{
+    transform: scale(1.5); 
+    transition: 0.3s ease;
+}
+.skills{
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 40px;
+    margin:10px;
+    padding:10px;
+}
+.projectSummary{
+    padding-left:15px;
+}
+.projectRightContainer{
+    background-color: white;
+    opacity: 0.7;
+    width:60%;
+    height:550px;
+    border-radius: 10px;
+    margin-top:50px;
+    margin-right:50px;
+}
+.projectSectionTwo{
+    background-color: #B39187;
+}
+.projectSectionThree{
+    background-color: #B38791;
+}
+.projectSectionFour{
+    background-color: #8B87B3;
+}
