@@ -1,6 +1,7 @@
 import './App.css';
 import HomePage from './components/HomePage/HomePage';
 import LayOut from './components/Layout/LayOut';
+import AboutPage from './components/AboutPage/AboutPage';
 import {
     createBrowserRouter,
     RouterProvider,
@@ -18,6 +19,10 @@ import {
             {
                 path:"/",
                 element:<HomePage />
+            },
+            {
+              path:"/About",
+                element:<AboutPage />
             }
         ]
       },

@@ -66,6 +66,26 @@ li{
     margin:10px;
     padding:10px;
 }
+.readMore{
+    background-color: rgba(0,0,0,0.3);
+    color:white;
+    border-radius: 40px;
+    margin:10px;
+    padding:10px;
+    display:inline-block;
+    border:1px;
+}
+.readMore:hover{
+    transform: scale(1.5); 
+    transition: 0.3s ease;
+    border: 1px;
+}
+
+@keyframes bg-spin {
+to {
+    --border-angle: 1turn;
+}
+}
 .projectSummary{
     padding-left:15px;
 }
