@@ -23,7 +23,7 @@ p.introContent {
 
 h2.introContent {
     max-width: 100%; /* Ensure the width does not exceed the container */
-    font-size: 30px;
+    font-size: 40px;
     width:50%
 }
 
@@ -31,7 +31,7 @@ h2.introContent {
     position: relative; /* Change to relative positioning if possible */
     height: 650px;
     margin: 50px auto 0 auto; /* Center the section horizontally */
-    width: calc(90%); /* Adjust width considering margins */
+    width: 1500px; /* Adjust width considering margins */
     background-color: #B38F6F;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     margin-top:5%;
@@ -40,10 +40,11 @@ h2.introContent {
     font-size:15px;
     display:flex;
     flex-direction: row;
+    border: 1px solid transparent;
 }
 .projectLeftContainer{
     padding-top:20px;
-    padding-left:30px;
+    padding-left:40px;
     width:40%;
 }
 li{
@@ -88,6 +89,7 @@ to {
 }
 .projectSummary{
     padding-left:15px;
+    font-size: 15px;
 }
 .projectRightContainer{
     background-color: white;

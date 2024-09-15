@@ -50,10 +50,33 @@ const HomePage = () =>{
             </div>
         </div>
         <div className="projectSection projectSectionThree">
+            <div className = "projectLeftContainer">
+                    <h1>Love Letters Card Game</h1>
+                    <div className = "skillsList">
+                        <li className ="skills"><a>HTML</a></li>
+                        <li className ="skills"><a>CSS</a></li>
+                        <li className="skills"><a>JavaScript</a></li>
+                        <li className ="skills"><a>React.js</a></li>
+                        <button className="readMore"><a>READ MORE</a></button>
+                        <p></p>
+                    </div>
+            </div>
+            <div className = "projectRightContainer">
 
+            </div>
         </div>
         <div className="projectSection projectSectionFour">
-
+            <div className = "projectLeftContainer">
+                <h1>Las Vegas Weekend Itinerary Planner/Bingo</h1>
+                <div className = "skillsList">
+                    <li className ="skills"><a>HTML</a></li>
+                    <li className ="skills"><a>CSS</a></li>
+                    <li className="skills"><a>JavaScript</a></li>
+                    <li className ="skills"><a>Vue.js</a></li>
+                    <button className="readMore"><a>READ MORE</a></button>
+                    <p></p>
+                </div>
+            </div>
         </div>
     </div>
   );

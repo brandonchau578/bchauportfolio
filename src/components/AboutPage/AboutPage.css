@@ -1,15 +1,24 @@
+body{
+    background-color: linear-gradient(to right, #B39187, #B38791, #8B87B3);
+}
 .aboutPageContainer{
-    padding-top:10%;
+    padding-top:5%;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: linear-gradient(to right, #B39187, #B38791, #8B87B3);
 }
 .aboutMeContainer{
-    padding:auto;
     display:flex;
     position:relative;
     height:1500px;
     color:white;
-    width:100%;
+    width:1300px;
     flex-direction:column;
     align-items:center;
+    margin: 0 auto;
+    font-size: 24px;
+    text-align: center;
 }
 .profilePictureContainer{
     width:500px;
@@ -22,8 +31,20 @@
     border-radius:20px;
 }
 
-.workExperience{
+.workExperienceSection{
     background: linear-gradient(to right, #B39187, #B38791, #8B87B3);
     height: 800px;
     width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.workExperienceContainer{
+    background-color:white;
+    height: 80%;
+    width:80%;
+    opacity:0.4;
+    margin:0;
+    padding:0;
+    border-radius:20px;
 }
