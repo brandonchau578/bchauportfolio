@@ -32,19 +32,57 @@ body{
 }
 
 .workExperienceSection{
-    background: linear-gradient(to right, #B39187, #B38791, #8B87B3);
     height: 800px;
     width:100%;
     display:flex;
     align-items: center;
-    justify-content: center;
+    padding:20px;
+    color:white
 }
 .workExperienceContainer{
-    background-color:white;
+    background-color:rgba(255,255,255,0.4);
     height: 80%;
-    width:80%;
-    opacity:0.4;
+    width:1500px;
     margin:0;
     padding:0;
     border-radius:20px;
+    z-index: 0;
+    position:relative;
+    justify-content: space-evenly;
+    display:flex;
+    flex-direction: column;
+}
+.workExperienceTitle{
+    margin-left: 5%;
+    padding-left: 10px;
+    display:flex;
+}
+.workExperience{
+    font-size: 15px;
+    background: rgba(255,255,255,0.5);
+    width:80%;
+    opacity: 1;
+    color:purple;
+    z-index:1;
+    position:relative;
+    border-radius:20px;
+    margin-left: 5%;
+    width:500px;
+    height:150px;
+    padding-left: 10px;
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    gap:10px;
+    
+}
+.JobLogos{
+    width:100px;
+    height:90px;
+}
+.ZotLogo{
+    width:100px;
+}
+.DividerLine{
+    font-size:40px;
 }
