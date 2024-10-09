@@ -4,7 +4,7 @@ const HomePage = () =>{
   return (
     <div className = "introContainer">
         <div className = "introductionParagraph">
-            <h1 className="introContent">welcome, i'm brandon!</h1>
+            <h1 className="introContent">hello, i'm brandon!</h1>
             <h2 className="introContent">i'm a front-end engineer committed to crafting innovative and user-centric web experiences by seamlessly blending creativity with technical expertise</h2>
             <p className="introContent"> </p>
         </div>
