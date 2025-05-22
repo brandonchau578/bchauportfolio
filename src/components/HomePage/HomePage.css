@@ -1,116 +1,848 @@
-html body {
-    background: #91b387; /* Specific selector */
+@import url('https://fonts.googleapis.com/css2?family=NTR&display=swap');
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #051536;
+  font-family: 'NTR', sans-serif;
+  height: 100%;
 }
+
+p {
+  font-size: 25px;
+  font-family: 'NTR', sans-serif;
+}
+
 .introContainer {
-    width: 100%;
-    flex-direction: column;
-    padding-top: 15%;
-    font-size: 30px;
-    box-sizing: border-box; /* Include padding in the container's width */
-    padding-bottom:50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh; /* This makes it take up the full viewport height */
+  width: 100%;
+  min-height: 600px; /* Minimum height for smaller screens */
+  font-family: 'NTR', sans-serif;
+  /* Remove padding-top as we're using flex to center content vertically */
+}
+
+.introductionParagraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-family: 'NTR', sans-serif;
 }
 
 .introContent {
-    color: white;
-    padding-left: 5%;
-    box-sizing: border-box; /* Include padding in the width calculation */
-    width:80%;
-    height:100%;
-    padding-bottom:50px;
+  color: white;
+  box-sizing: border-box;
+  height: auto; /* Changed from 100 to auto */
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  max-width: 600px;
+  text-align: center;
+  font-family: 'NTR', sans-serif;
+  margin-bottom: 20px; /* Add some space between elements */
+}
+
+.introName {
+  color: rgb(53, 231, 147);
+}
+
+.introTitle {
+  font-size: 50px;
+}
+
+.cursorBlinking {
+  display: inline-block;
+  color: rgb(53, 231, 147);
+  font-weight: bold;
+  animation: blink 1s step-end infinite;
+  font-size: 50px;
+  border-radius: 10px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
 }
 
 p.introContent {
-    max-width: 100%; /* Ensure the width does not exceed the container */
-    font-size: 20px;
+  max-width: 600px;
 }
 
-h2.introContent {
-    max-width: 100%; /* Ensure the width does not exceed the container */
+#experienceSection {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  max-width: 1300px;
+  margin: 100px auto 50px auto; /* Center horizontally and add space above and below */
+  font-family: 'NTR', sans-serif;
+  width: 80%;
+  padding: 0 20px; /* Padding on the sides for mobile */
+  box-sizing: border-box;
+}
+
+a {
+  color: rgb(53, 231, 147);
+  text-decoration: none;
+  transition: color 0.5s ease, transform 0.5s ease; /* Fixed transition property */
+  display: inline-block;
+  position: relative;
+}
+
+a:hover {
+  color: rgb(83, 255, 177);
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-header {
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-right: 15px; /* Space between the text and line */
+}
+
+.section-header::after {
+  content: "";
+  width:30%;
+  flex-grow: 1;
+  height: 1px; /* Thin line */
+  background: rgba(255, 255, 255, 0.2); /* Very faint white line */
+  display: inline-block;
+}
+
+/* Add responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .introTitle {
     font-size: 40px;
-    width:50%
+  }
+  
+  .cursorBlinking {
+    font-size: 40px;
+  }
+  
+  p {
+    font-size: 20px;
+  }
+}
+.techStackContainer {
+  width: 100%;
+  max-width:100%;
+  margin: 30px 0;
+  height:20%;
 }
 
-.projectSection {
-    position: relative; /* Change to relative positioning if possible */
-    height: 650px;
-    margin: 50px auto 0 auto; /* Center the section horizontally */
-    width: 1500px; /* Adjust width considering margins */
-    background-color: #B38F6F;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    margin-top:5%;
-    border-radius:10px;
-    color:white;
-    font-size:15px;
-    display:flex;
-    flex-direction: row;
-    border: 1px solid transparent;
-}
-.projectLeftContainer{
-    padding-top:20px;
-    padding-left:40px;
-    width:40%;
-}
-li{
-    list-style:none;
-}
-.skillsList{
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    width:500px;
-    margin-left:-3%;
-}
-.skills:hover{
-    transform: scale(1.5); 
-    transition: 0.3s ease;
-}
-.skills{
-    background-color: rgba(255,255,255,0.2);
-    border-radius: 40px;
-    margin:10px;
-    padding:10px;
-    cursor:pointer;
-}
-.readMore{
-    background-color: rgba(0,0,0,0.3);
-    color:white;
-    border-radius: 40px;
-    margin:10px;
-    padding:10px;
-    display:inline-block;
-    border:1px;
-    cursor:pointer;
-}
-.readMore:hover{
-    transform: scale(1.5); 
-    transition: 0.3s ease;
-    border: 1px;
+.techStackGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto); /* 3 rows */
+  gap: 10px; /* Space between grid items */
+  width:35%;
 }
 
-@keyframes bg-spin {
-to {
-    --border-angle: 1turn;
+.techItem {
+  background: rgba(255, 255, 255, 0.05); /* Subtle background */
+  border-radius: 8px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  text-align: center;
+  border-left: 3px solid rgb(53, 231, 147); /* Green accent matching your theme */
 }
+
+.techItem span {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
 }
-.projectSummary{
-    padding-left:15px;
-    font-size: 15px;
+
+/* Add staggered delays based on data-delay attribute */
+.fade-in-section[data-delay="0"].is-visible {
+  transition-delay: 0.2s;
 }
-.projectRightContainer{
-    background-color: white;
-    opacity: 0.7;
-    width:60%;
-    height:550px;
-    border-radius: 10px;
-    margin-top:50px;
-    margin-right:50px;
+
+.fade-in-section[data-delay="1"].is-visible {
+  transition-delay: 0.4s;
 }
-.projectSectionTwo{
-    background-color: #B39187;
+
+.fade-in-section[data-delay="2"].is-visible {
+  transition-delay: 0.8s;
 }
-.projectSectionThree{
-    background-color: #B38791;
+
+.fade-in-section[data-delay="3"].is-visible {
+  transition-delay: 1s;
 }
-.projectSectionFour{
-    background-color: #8B87B3;
+
+.fade-in-section[data-delay="4"].is-visible {
+  transition-delay: 1.2s;
+}
+
+.fade-in-section[data-delay="5"].is-visible {
+  transition-delay: 1.4s;
+}
+
+.aboutContentWrapper {
+  display: flex;
+  gap: 40px; /* Space between content and image */
+  align-items: flex-start; /* Align to the top */
+  width: 1200px;
+}
+
+/* Text content on the left */
+.aboutDescription {
+  flex: 3; /* Takes up more space than the image */
+  font-size:12px;
+  width:600px
+}
+
+/* Image container on the right */
+.aboutImageContainer {
+  flex: 1; /* Takes up less space than the text */
+  margin-top: 30px; /* Align with text */
+}
+
+/* The image itself */
+.aboutImage {
+  width: 500px;
+  height: 500px;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+.aboutDescription p {
+  font-size: 24px; /* Smaller font size than your default 25px */
+  line-height: 1.4; /* Proper line height for readability */
+  color:#828da9;
+}
+
+/* Make the layout responsive */
+@media (max-width: 768px) {
+  .aboutContentWrapper {
+    flex-direction: column; /* Stack vertically on mobile */
+    gap: 20px;
+  }
+  
+  .aboutImageContainer {
+    margin: 0 auto; /* Center image */
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .techStackGrid {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+}
+
+/* Experience Section Styles */
+.experienceSection {
+  margin-top: 80px;
+  width: 95%;
+}
+
+.experience-content-wrapper {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.experience-tabs {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  margin-right: 6px;; /* This keeps the outer edges rounded while inner edges remain flush */
+}
+
+.experience-tab span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Click animation - middle-out sweeping lines */
+.experience-tabs-container {
+  position: relative;
+  display: flex;
+}
+.tab-indicator {
+  position: absolute;
+  right: 0; /* Moved from left to right */
+  width: 3px;
+  background-color: rgb(53, 231, 147);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border-radius: 4px 0 0 4px; /* Reversed border radius for left side rounding */
+  box-shadow: 0 0 8px rgba(53, 231, 147, 0.5);
+  z-index: 10;
+}
+.experience-tab {
+  padding: 15px 20px;
+  font-size: 22px;
+  color: #828da9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.experience-tab span {
+  position: relative;
+  z-index: 3;
+}
+
+.experience-tab:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #a5afc9;
+}
+
+.experience-tab.active-tab {
+  color: rgb(53, 231, 147);
+  font-weight: 500;
+}
+
+/* Left half line */
+.experience-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, rgba(53, 231, 147, 0.3), rgba(53, 231, 147, 0));
+  z-index: 1;
+  transform-origin: left;
+}
+
+/* Right half line */
+.experience-tab::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to left, rgba(53, 231, 147, 0.3), rgba(53, 231, 147, 0));
+  z-index: 2;
+  transform-origin: right;
+}
+
+/* Animation when clicked */
+.experience-tab.clicked::before {
+  animation: expand-right 0.4s ease-out forwards;
+}
+
+.experience-tab.clicked::after {
+  animation: expand-left 0.4s ease-out forwards;
+}
+
+@keyframes expand-right {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes expand-left {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 50%;
+    opacity: 0;
+  }
+}
+
+/* Content Area */
+.experience-content {
+  flex: 1;
+  padding: 10px 0 10px 30px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-details {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Updated role and company styling */
+.experience-role {
+  color: white;
+  font-size: 28px;
+  margin: 0 0 5px 0;
+  font-weight: normal;
+}
+
+/* The @ symbol stays white */
+.experience-role .at-symbol {
+  color: white;
+}
+
+/* Company name becomes green */
+.experience-role .company-name {
+  color: rgb(53, 231, 147);
+}
+
+.experience-period {
+  color: #828da9;
+  font-size: 18px;
+  margin: 0 0 20px 0;
+}
+
+.experience-description {
+  margin-bottom: 25px;
+}
+
+.experience-description p {
+  color: #a5afc9;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.experience-skills h4 {
+  color: #828da9;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  font-weight: normal;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 18px;
+  color: #a5afc9;
+  border: 1px solid rgba(53, 231, 147, 0.3);
+}
+
+/* Projects Section Styles */
+.projectsSection {
+  margin-top: 100px;
+  width: 95%;
+  color: white;
+}
+
+/* NEW SLIDING CAROUSEL STYLES */
+.carousel-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 3rem auto;
+  position: relative;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%; /* Track width is 100% of container */
+}
+
+.carousel-slide {
+  position: relative;
+  flex: 0 0 100%; /* Each slide takes 100% of container width */
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 40px 30px 30px;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.carousel-caption h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn-prev {
+  left: 20px;
+}
+
+.carousel-btn-next {
+  right: 20px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.indicator-line {
+  width: 40px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-line.active {
+  background: rgb(53, 231, 147);
+  box-shadow: 0 0 8px rgba(53, 231, 147, 0.5);
+}
+
+.indicator-line:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scaleY(1.5);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(53, 231, 147, 0.3);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.github-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px;
+  color: #a5afc9;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.github-btn:hover {
+  background: rgba(53, 231, 147, 0.1);
+  border-color: rgb(53, 231, 147);
+  color: rgb(53, 231, 147);
+  transform: scale(1.1);
+}
+
+.project-content {
+  margin-right: 60px; /* Leave space for the GitHub button */
+}
+
+.project-title {
+  font-size: 24px;
+  color: white;
+  margin: 0 0 15px 0;
+  font-weight: 600;
+}
+
+.project-description {
+  font-size: 18px;
+  color: #a5afc9;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Ripple effect styles */
+.experience-tab .ripple {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: rgba(53, 231, 147, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+  /* Animation is set dynamically via JavaScript */
+}
+
+/* Define the ripple animation */
+@keyframes full-button-ripple {
+  to {
+    width: var(--ripple-size);
+    height: var(--ripple-size);
+    opacity: 0;
+  }
+}
+
+.experience-details {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.experience-details.content-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade animations for tab content elements */
+.experience-role,
+.experience-period,
+.experience-description,
+.experience-skills {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.content-visible .experience-role {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.content-visible .experience-period {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.content-visible .experience-description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.3s;
+}
+
+.content-visible .experience-skills {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.4s;
+}
+
+/* Responsive styles for experience section */
+@media (max-width: 768px) {
+  .experience-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .experience-tabs {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+  
+  .experience-tab {
+    margin-right: 25px;
+  }
+  
+  /* For mobile, adjust the animation orientation */
+  .experience-tab::before {
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, rgba(53, 231, 147, 0.3), rgba(53, 231, 147, 0));
+    transform-origin: top;
+  }
+  
+  .experience-tab::after {
+    right: 0;
+    bottom: 50%;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to top, rgba(53, 231, 147, 0.3), rgba(53, 231, 147, 0));
+    transform-origin: bottom;
+  }
+  
+  .experience-tab.clicked::before {
+    animation: expand-down 0.1s ease-out forwards;
+  }
+  
+  .experience-tab.clicked::after {
+    animation: expand-up 0.1s ease-out forwards;
+  }
+  
+  @keyframes expand-down {
+    0% {
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      height: 50%;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes expand-up {
+    0% {
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      height: 50%;
+      opacity: 0;
+    }
+  }
+  
+  .experience-content {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  /* Mobile responsive for carousel */
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .carousel-btn-prev {
+    left: 10px;
+  }
+  
+  .carousel-btn-next {
+    right: 10px;
+  }
+  
+  .carousel-caption {
+    padding: 30px 20px 20px;
+  }
+  
+  .carousel-caption h3 {
+    font-size: 1.25rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+  
+  .indicator-line {
+    width: 30px;
+    height: 3px;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .project-card {
+    padding: 20px;
+  }
+  
+  .project-title {
+    font-size: 20px;
+  }
+  
+  .project-description {
+    font-size: 16px;
+  }
 }
